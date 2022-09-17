@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+
 }
 
 .App-logo {
@@ -32,7 +33,73 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+ul {
+  position: fixed;
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0 0 0 30px;
+  background-color: black;
+  align-items: center;
+}
+
+li a {
+  display: block;
+  padding: 14px 16px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+
+.active {
+  background-color: rgb(205, 174, 23);
+}
+
+li a:hover {
+  background-color: rgb(205, 174, 23);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card img {
+  display: block;
+  image-rendering: unset;
+  width: 433.656px;
+  height: 250px;
+}
+
+.card {
+  justify-content: center;
+  margin: 16px 8px;
+  background-color: lightgrey;
+}
+
+.title {
+  background-color: lightgrey;
+  font-weight: bold;
+  color: grey;
+}
+
+p button {
+  background-color: black;
+  color: white;
+}
+
+p {
+  background-color: black;
+}
+
+.footer {
+  background-color: rgb(205, 174, 23);
+  position: sticky;
 }
