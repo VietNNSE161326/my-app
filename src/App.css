@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-
 }
 
 .App-logo {
@@ -69,6 +68,7 @@ li a:hover {
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  padding-top: 49px;
 }
 
 .card img {
