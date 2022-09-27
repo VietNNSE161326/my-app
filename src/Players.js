@@ -1,6 +1,8 @@
 import React from 'react'
 import { Player } from '../src/shared/ListOfPlayers'
+import { useState } from 'react'
 export default function Players() {
+    const [player, setPlayer] = useState([]);
     return (
         <div className='container'>
             {Player.map((player) => (
@@ -9,10 +11,20 @@ export default function Players() {
                         <img src={player.img} />
                         <h3>{player.name}</h3>
                         <p className='title'>{player.club}</p>
-                        <p><button>Detail</button></p>
+                        <p><button onClick={() => { setPlayer(player) }}><a href='#popup' id='openPopUp'>Detail</a></button></p>
                     </div>
                 </div>
             ))}
+            <div id='popup' className='overlay'>
+                <div className='popup'>
+                    <img src={player.img} />
+                    <h2>{player.name}</h2>
+                    <a className='close' href='#'>&times;</a>
+                    <div className='content'>
+                        {player.info}
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
